@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Storage-proxy : Free Science for a better tomorow" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Storage-proxy</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/bigcurl/storage-proxy">View on GitHub</a>
+
+          <h1 id="project_title">Storage-proxy</h1>
+          <h2 id="project_tagline">Free Science for a better tomorow</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/bigcurl/storage-proxy/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/bigcurl/storage-proxy/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>storage-proxy</h1>
+
+<p>This repository is git flow enabled (default settings).</p>
+
+<h2>Goal</h2>
+
+<p>The goal of this app is to show the consistent hash algorithm in use while proxing data to different storage systems.</p>
+
+<p>Initialy I use folders to represent cloud storage systems. They abstract away a more complex cloud storage api, we have better network speed (drive speed) and we have unlimited number readily available.</p>
+
+<h2>Request Lifecycle</h2>
+
+<h3>Client:</h3>
+
+<ul>
+<li>Clients sends (html post) data to api</li>
+<li>Clients receives (html get) data from api</li>
+</ul><h3>Server:</h3>
+
+<h4>receive</h4>
+
+<ul>
+<li>api checks file size (header). should be smaller than 5 GB.</li>
+<li>api determines hash of filename and folders (eg. storage services) to store to</li>
+<li>api receives data and stores it into folder</li>
+<li>api should take hash of receiving data</li>
+<li>api should store hash and name of receiving data</li>
+<li>api returns hash in response</li>
+</ul><h4>send</h4>
+
+<ul>
+<li>api determines hash of filename and folders (eg. storage services) to receive from</li>
+<li>api streams file back from one of the folders to client</li>
+</ul><h3>Config:</h3>
+
+<ul>
+<li>api needs names and hashes of folders (eg. services)</li>
+</ul><h2>Part of PhD-Thesis</h2>
+
+<p>This code is part of my PhD-Thesis: A longterm storage strategy for the cultural heritage of the Federal Republic of Germany</p>
+
+<p>It is an explorative sciences project which hopefully helps me gain some new ideas on how to tacle the problem of storing digital culture for future generations. I'm not responsible for forks or what YOU do with the code.</p>
+
+<h2>License</h2>
+
+<p>Free Science for a better tomorow</p>
+
+<p>Copyright (c) 2012 Samuel Goebert</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Storage-proxy maintained by <a href="https://github.com/bigcurl">bigcurl</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
